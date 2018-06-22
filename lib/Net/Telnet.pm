@@ -2916,15 +2916,7 @@ sub _io_socket_include {
 
 sub _is_open_fh {
     my ($fh) = @_;
-    my $is_open = '';
-    local $@;
-
-    eval {
-	local $SIG{"__DIE__"} = "DEFAULT";
-	$is_open = defined(fileno $fh);
-    };
-
-    $is_open;
+    return UNIVERSAL::can($fh, 'print') ? 1 : 0;
 } # end sub _is_open_fh
 
 
