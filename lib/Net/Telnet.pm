@@ -2916,7 +2916,17 @@ sub _io_socket_include {
 
 sub _is_open_fh {
     my ($fh) = @_;
-    return UNIVERSAL::can($fh, 'print') ? 1 : 0;
+    return 1 if UNIVERSAL::can($fh, 'print');
+
+    my $is_open = '';
+    local $@;
+
+    eval {
+       local $SIG{"__DIE__"} = "DEFAULT";
+       $is_open = defined(fileno $fh);
+    };
+
+    $is_open;
 } # end sub _is_open_fh
 
 
