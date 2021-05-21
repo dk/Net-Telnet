@@ -8,5 +8,7 @@ WriteMakefile(NAME	   => "Net::Telnet2",
 	      dist	   => { COMPRESS => "gzip", SUFFIX => "gz" },
 	      ($] >= 5.005 ?
 	       (ABSTRACT   => "Interact with TELNET port or other TCP ports",
-		AUTHOR	   => "Jay Rogers <jay\@rgrs.com>") : ()),
-	      );
+		AUTHOR	   => "Jay Rogers <jay\@rgrs.com>"),
+                META_MERGE => { resources => { repository => 'https://github.com/dk/Net-Telnet', },
+               :()),
+);
