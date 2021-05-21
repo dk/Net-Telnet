@@ -2,5 +2,6 @@ ChangeLog
 MANIFEST
 Makefile.PL
 lib/Net/Telnet.pm
+lib/Net/Telnet2.pm
 t/select.t
 META.yml                                 Module meta-data (added by MakeMaker)
