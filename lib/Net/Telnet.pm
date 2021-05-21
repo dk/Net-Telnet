@@ -51,7 +51,7 @@ my $EINTR = &_import_eintr();
 
 ## Global variables.
 use vars qw($VERSION @Telopts);
-$VERSION = "3.04";
+$VERSION = "3.04_1";
 @Telopts = ("BINARY", "ECHO", "RCP", "SUPPRESS GO AHEAD", "NAMS", "STATUS",
 	    "TIMING MARK", "RCTE", "NAOL", "NAOP", "NAOCRD", "NAOHTS",
 	    "NAOHTD", "NAOFFD", "NAOVTS", "NAOVTD", "NAOLFD", "EXTEND ASCII",
