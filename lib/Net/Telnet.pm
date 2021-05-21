@@ -1,3 +1,4 @@
+package Net::Telnet2; # for cpan indexer
 package Net::Telnet;
 
 ## Copyright 1997, 2000, 2002, 2013 Jay Rogers.  All rights reserved.
@@ -51,7 +52,7 @@ my $EINTR = &_import_eintr();
 
 ## Global variables.
 use vars qw($VERSION @Telopts);
-$VERSION = "3.04_1";
+$VERSION = "3.04_2";
 @Telopts = ("BINARY", "ECHO", "RCP", "SUPPRESS GO AHEAD", "NAMS", "STATUS",
 	    "TIMING MARK", "RCTE", "NAOL", "NAOP", "NAOCRD", "NAOHTS",
 	    "NAOHTD", "NAOFFD", "NAOVTS", "NAOVTD", "NAOLFD", "EXTEND ASCII",
